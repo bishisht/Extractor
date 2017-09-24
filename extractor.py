@@ -14,7 +14,7 @@ def grab_email(file):
 	if os.path.isfile(file):
 		for line in open(file, 'r'):
 			found.update(email_pattern.findall(line))
-			for email_address in found:
-				print email_address
+		for email_address in found:
+			print email_address
 
 if __name__ == '__main__':grab_email(sys.argv[1])
